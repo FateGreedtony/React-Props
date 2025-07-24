@@ -22,7 +22,7 @@ function App() {
 
 export default App;
 
-// destructuring in parameter
+// ===== destructuring in parameter =====
 // function Welcome(username, age) {
 //   return <p>Aku adalah {username}, umurku {age} tahun!</p>;
 // }
@@ -44,7 +44,7 @@ export default App;
 // }
 
 
-// contoh props dengan berbagai tipe
+// ===== contoh props dengan berbagai tipe =====
 // function Header() {
 //   return <h1>Aku adalah Header dari props!</h1>;
 // }
