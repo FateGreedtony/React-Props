@@ -1,5 +1,6 @@
-function Welcome({ username, age}) {
-  return <p>Aku adalah {username}, umurku {age} tahun!</p>;
+function Welcome(props) {
+  const { username, age, hobby } = props;
+  return <p>Aku adalah {username}, umurku {age} tahun, dan hobbyku adalah {hobby}</p>;
 }
 
 function App() {
@@ -8,10 +9,12 @@ function App() {
       <Welcome 
         username="Tirta" 
         age="17"
+        hobby="berkuda"
       />
       <Welcome 
         username="Adit"
         age="18"
+        hobby="membantu sesama"
       />
     </div>
   );
@@ -19,6 +22,10 @@ function App() {
 
 export default App;
 
+// destructuring in parameter
+// function Welcome(username, age) {
+//   return <p>Aku adalah {username}, umurku {age} tahun!</p>;
+// }
 
 // komponen dasar untuk contoh modul halaman 4
 // export default App;
