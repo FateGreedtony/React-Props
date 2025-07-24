@@ -1,9 +1,7 @@
-// Header yang akan dikirim sebagai JSX
 function Header() {
   return <h1>Aku adalah Header dari props!</h1>;
 }
 
-// child
 function InfoBox(props) {
   return (
     <div style={{ border: "1px solid gray", padding: "10px", marginBottom: "10px" }}>
@@ -19,7 +17,6 @@ function InfoBox(props) {
   );
 }
 
-// parent
 function App() {
   const handleClick = () => {
     alert("Tombol dari props telah ditekan!");
@@ -42,6 +39,7 @@ function App() {
 }
 
 export default App;
+
 
 // komponen dasar untuk contoh modul halaman 4
 // export default App;
