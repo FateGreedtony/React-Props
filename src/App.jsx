@@ -1,26 +1,75 @@
-function Welcome(props) {
-  const { username, age, hobby } = props;
-  return <p>Aku adalah {username}, umurku {age} tahun, dan hobbyku adalah {hobby}</p>;
+function Profile({ name, age, hobby, photo }) {
+  return (
+    <div style={{
+      border: "1px solid #ccc",
+      padding: "15px",
+      margin: "10px 0",
+      borderRadius: "8px",
+      maxWidth: "300px",
+      backgroundColor: "#f9f9f9"
+    }}>
+      <img 
+        src={photo} 
+        alt={`Foto ${name}`} 
+        style={{ width: "100%", borderRadius: "8px" }} 
+      />
+      <h2>{name}</h2>
+      <p>Umur: {age} tahun</p>
+      <p>Hobi: {hobby}</p>
+    </div>
+  );
 }
 
 function App() {
   return (
     <div>
-      <Welcome 
-        username="Tirta" 
-        age="17"
-        hobby="berkuda"
+      <h1>Daftar Profil</h1>
+
+      <Profile 
+        name="Tirta"
+        age={17}
+        hobby="Berkuda"
+        photo="https://i.pinimg.com/736x/1e/c1/b8/1ec1b8dd92f5f545b424d666e6683b66.jpg"
       />
-      <Welcome 
-        username="Adit"
-        age="18"
-        hobby="membantu sesama"
+
+      <Profile 
+        name="Adit"
+        age={18}
+        hobby="Ngoding"
+        photo="https://i.pinimg.com/736x/01/e0/9d/01e09d7aa7839e53ad2a16c3949443ca.jpg"
       />
     </div>
   );
 }
 
 export default App;
+
+
+
+
+// ===== destructuring in body =====
+// function Welcome(props) {
+//   const { username, age, hobby } = props;
+//   return <p>Aku adalah {username}, umurku {age} tahun, dan hobbyku adalah {hobby}</p>;
+// }
+
+// function App() {
+//   return (
+//     <div>
+//       <Welcome 
+//         username="Tirta" 
+//         age="17"
+//         hobby="berkuda"
+//       />
+//       <Welcome 
+//         username="Adit"
+//         age="18"
+//         hobby="membantu sesama"
+//       />
+//     </div>
+//   );
+// }
+
 
 // ===== destructuring in parameter =====
 // function Welcome(username, age) {
